@@ -1,0 +1,201 @@
+.demo-locator {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 16px;
+  padding: 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @media only screen and (min-width: 768px) {
+    grid-template-columns: repeat(8, 1fr);
+    column-gap: 24px;
+    padding: 0 32px;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 32px;
+    padding: 0 60px;
+  }
+}
+
+.side-rail {
+  grid-column: 1 / -1;
+  
+  @media only screen and (min-width: 768px) {
+    grid-column: 1 / span 2;
+    padding: 24px 0;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    grid-column: 1 / span 3;
+  }
+}
+
+.side-rail__search-filter-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.side-rail__search-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+.side-rail__search-input {
+  padding: 5px;
+  width: calc((300/335)*100%)
+}
+
+.side-rail__search-btn {
+  padding: 7px 12px;
+  background-color: #204D60;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.side-rail__filter-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.side-rail__filter-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 8px;
+  row-gap: 8px;
+}
+
+.side-rail__countries-dropdown {
+  padding: 5px;
+}
+
+.side-rail__filter-icon {
+  background: none;
+  padding: 5px;
+  display: flex;
+  border: 1px solid #204D60;
+  cursor: pointer;
+}
+
+.side-rail__filter-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.side-rail__filter-options.hidden {
+  display: none;
+}
+
+.side-rail__view-container-mobile {
+  width: 100%;
+  display: flex;
+  border-top: 5px solid #14273D;
+  border-bottom: 5px solid #14273D;
+
+  @media only screen and (min-width: 768px) {
+   display: none;
+  }
+}
+
+.side-rail__view-container-mobile button {
+  width: 50%;
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.side-rail__view-container-mobile button:hover {
+  background-color: #204D60;
+  color: #fff;
+}
+
+.side-rail__locations-container {
+  width: 100%;
+}
+
+.side-rail__locations-length {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #204D60;
+  color: #fff;
+}
+
+.side-rail__location-items {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.side-rail__location-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.side-rail__top-container {
+  display: flex;
+}
+
+.side-rail__location-background {
+  background-image: url('../images/map_pin_regular.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.side-rail__right-arrow {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.map-container {
+  display: none;
+
+  @media only screen and (min-width: 768px) {
+    display: unset;
+    width: 100%;
+    grid-column: 3 / -1;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    grid-column: 4 / -1;
+  }
+}
+
+.map-container img {
+  width: 100%;
+}
+
+.side-rail__filter-close-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.side-rail__filter-close-btn.hidden {
+  display: none;
+}
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="./css/stylesheet.css">
+  <title>Demo Locator</title>
+</head>
+<body>
+  <section class="demo-locator">
+   <div class="side-rail">
+      <div class="side-rail__search-filter-container">
+        
+        <div class="side-rail__search-container">
+          <input class="side-rail__search-input" type="search" id="search" name="search" placeholder="Search">
+          <button class="side-rail__search-btn" type="submit">search</button>
+        </div>
+        
+        <div class="side-rail__filter-container">
+          <div class="side-rail__dropdown-container">
+            <!-- Dropdown options are handled in the js -->
+          </div>
+          <button class="side-rail__filter-icon">
+            <!-- I used the clock icon as replacement for the missing filter icon -->
+            <img src="./images/clock_icon.png" alt="filter icon" />
+          </button>
+        </div>
+        
+        <div class="side-rail__filter-options hidden">
+          <div class="side-rail__filter-label">Filters</div>
+        </div>
+
+        <div class="side-rail__filter-close-btn hidden">
+          <button>Close Filters</button>
+        </div>
+        
+        <div class="side-rail__result-container">
+          <!-- Only visible in mobile breakpoint -->
+          <div class="side-rail__view-container-mobile">
+            <button>List View</button>
+            <button>Map View</button>
+          </div>
+
+          <div class="side-rail__locations-container">
+            <!-- Locations length is handled in the js -->
+            <div class="side-rail__locations-length"></div>
+            <!-- Location items are handled in the js -->
+          </div>
+        
+        </div>
+      </div>
+   </div>
+   <div class="map-container">
+    <img src="./images/map-screenshot.png" alt="map" />
+   </div>
+  </section>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
